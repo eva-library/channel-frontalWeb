@@ -1,9 +1,8 @@
 
 [![N|Solid](https://i.ibb.co/LtT31vK/eva-150px.png)](https://eva.bot/)
 
-# Eva Frontend
-## With Angular Elements Component
-##
+# eva Frontend
+##  Angular Elements Component
 
 This document explains the necessary steps for the web frontend deployment connected to a eva bot.
 
