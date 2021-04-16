@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="25px" viewBox="0 0 24 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>24314741-99E0-4628-82BF-1F20F88F8B89</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="448" height="543" rx="12"></rect>
+        <filter x="-13.4%" y="-6.6%" width="126.8%" height="122.1%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="24" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="16" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.0549019608   0 0 0 0 0.0823529412   0 0 0 0 0.125490196  0 0 0 0.04 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feOffset dx="0" dy="16" in="SourceAlpha" result="shadowOffsetOuter2"></feOffset>
+            <feGaussianBlur stdDeviation="12" in="shadowOffsetOuter2" result="shadowBlurOuter2"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.0549019608   0 0 0 0 0.0823529412   0 0 0 0 0.125490196  0 0 0 0.04 0" type="matrix" in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
+            <feOffset dx="0" dy="8" in="SourceAlpha" result="shadowOffsetOuter3"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter3" result="shadowBlurOuter3"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.0549019608   0 0 0 0 0.0823529412   0 0 0 0 0.125490196  0 0 0 0.04 0" type="matrix" in="shadowBlurOuter3" result="shadowMatrixOuter3"></feColorMatrix>
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter4"></feOffset>
+            <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter4" result="shadowBlurOuter4"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.0549019608   0 0 0 0 0.0823529412   0 0 0 0 0.125490196  0 0 0 0.04 0" type="matrix" in="shadowBlurOuter4" result="shadowMatrixOuter4"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter3"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter4"></feMergeNode>
+            </feMerge>
+        </filter>
+        <path d="M19,4 L18,4 L14,4 L14,2.328 C14,1.044 12.879,0 11.5,0 L8.5,0 C7.121,0 6,1.044 6,2.328 L6,4 L2,4 L1,4 C0.45,4 0,4.45 0,5 C0,5.55 0.45,6 1,6 L2,6 L2,17 C2,18.654 3.346,20 5,20 L15,20 C16.654,20 18,18.654 18,17 L18,6 L19,6 C19.55,6 20,5.55 20,5 C20,4.45 19.55,4 19,4 L19,4 Z M8,2.328 C8,2.173 8.214,2 8.5,2 L11.5,2 C11.786,2 12,2.173 12,2.328 L12,4 L8,4 L8,2.328 Z M16,17 C16,17.551 15.552,18 15,18 L5,18 C4.448,18 4,17.551 4,17 L4,6 L16,6 L16,17 Z M14,14 C14,14.55 13.55,15 13,15 C12.45,15 12,14.55 12,14 L12,10 C12,9.45 12.45,9 13,9 C13.55,9 14,9.45 14,10 L14,14 Z M8,14 C8,14.55 7.55,15 7,15 C6.45,15 6,14.55 6,14 L6,10 C6,9.45 6.45,9 7,9 C7.55,9 8,9.45 8,10 L8,14 Z" id="path-3"></path>
+    </defs>
+    <g id="Ajustes-Tania" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="07-CHAT-TANIA-Solicitud-insumos" transform="translate(-1153.000000, -466.000000)">
+            <rect fill="#FFFFFF" x="0" y="0" width="1440" height="784"></rect>
+            <g id="Group-12"></g>
+            <g id="CHAT-TANIA" transform="translate(776.000000, 233.000000)">
+                <g id="FONDO">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <g id="Group-8" transform="translate(16.000000, 152.000000)">
+                    <g id="Group-2" fill="#EBF6FF">
+                        <path d="M0,0 L400,0 C404.418278,-8.11624501e-16 408,3.581722 408,8 L408,265 C408,269.418278 404.418278,273 400,273 L8,273 C3.581722,273 5.41083001e-16,269.418278 0,265 L0,0 L0,0 Z" id="Rectangle"></path>
+                    </g>
+                    <g id="Group-4-Copy-2" transform="translate(361.000000, 81.142857)">
+                        <g id="icon-/-outline-/-24-/-trash" transform="translate(0.000000, 0.714286)">
+                            <g transform="translate(2.000000, 2.000000)">
+                                <mask id="mask-4" fill="white">
+                                    <use xlink:href="#path-3"></use>
+                                </mask>
+                                <use id="Mask" fill="#737F87" xlink:href="#path-3"></use>
+                                <g id="color-/-grayicon" mask="url(#mask-4)">
+                                    <g transform="translate(-2.000000, -2.000000)">
+                                        <rect id="Rectangle" fill="#707382" fill-rule="evenodd" x="0" y="0" width="24" height="24"></rect>
+                                        <rect id="Rectangle-Copy-3" fill="none" x="2" y="2" width="20" height="20"></rect>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

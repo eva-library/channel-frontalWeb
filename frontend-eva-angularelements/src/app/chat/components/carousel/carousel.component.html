@@ -1,0 +1,22 @@
+
+<article>
+  <carousel [dots]="true" [loop]="true">
+    <div *ngFor="let item of items" class="carousel-cell carousel-card">
+      <div class="prueba">
+        <img [src]="item.imageUrl" class="materiales"/>
+      </div>
+      <div class="util-padvert-5 util-padhori-10">
+        <p class="title">{{item.title}}</p>
+        <p class="subtitle">{{item.subTitle}}</p>
+      </div>
+      <div class="util-padall-10">
+        <div *ngFor="let button of item.buttons" (click)="doAction(button)" class="puntero solicitar">
+          <span class="material-icons icono">add_circle_outline</span>
+            <p class="boton-solicitar-nombre">
+              {{button.name}}
+            </p>
+        </div>
+      </div>
+    </div>
+  </carousel>
+</article>

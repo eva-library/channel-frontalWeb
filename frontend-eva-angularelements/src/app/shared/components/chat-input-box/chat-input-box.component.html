@@ -1,0 +1,20 @@
+<!-- <div class="input-container" *ngIf="remoteConfigService.config != null">
+  <div class="fixed-input-container d-flex space-arround">
+    <textarea #textbox type="text" [disabled]="uiService.disableInput" [(ngModel)]="inputValue" required
+      class="form-control col-10 col-md-11" id="validationTextarea" rows="2" placeholder="{{remoteConfigService.config.chat_input_hint}}" autofocus
+      (keyup.enter)="sendMessage()"></textarea>
+    <div (click)="sendMessage()"
+      class="send-arrow col-2 col-md-1 d-flex text-center align-items-center justify-content-center ml-auto align-content-center cursor-pointer">
+      <img src="/assets/img/sendArrowEnabled.svg" *ngIf="!headerService.writing && inputValue !== ''"  alt="sendArrow">
+      <img src="/assets/img/sendArrowDisenabled.svg" *ngIf="headerService.writing !== false && inputValue === ''"  alt="sendArrow">
+    </div>
+  </div>
+</div> -->
+
+
+
+<div class="boxMessageControl" >
+  <input #textbox type="text"  class="boxMessageControl--input" [placeholder]=" localConfigService.config ? localConfigService.config.chat_input_hint: ''" 
+  [(ngModel)]="inputValue" required [disabled]="uiService.disableInput" (keyup.enter)="sendMessage()"  />
+  <div class="boxMessageControl--send"  (click)="sendMessage()" ></div>
+</div>

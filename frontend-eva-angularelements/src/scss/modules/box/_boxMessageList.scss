@@ -1,0 +1,44 @@
+@import '../module';
+
+.boxMessageList{
+  height: 84%;
+  //flex-grow: 1;
+  position: relative;
+ 
+}
+
+.boxMessageList--scroller {
+  overflow:auto;
+  height: 102%;
+  padding-bottom: 20px;
+}
+
+.boxMessageList--shadow {
+  position: absolute;
+  z-index: 1;
+  height: 25%;
+  background:linear-gradient(0deg, rgba(0,0,0,0.04) 24%, rgba(237,237,237,0) 100%);
+  width:100%;
+  bottom:0px;
+}
+
+.boxMessageList--scroller::-webkit-scrollbar {
+  -webkit-appearance:none;
+}
+
+.boxMessageList--scroller::-webkit-scrollbar-thumb{
+  border-radius: 4px;
+  background-color: #C9D0E4;
+}
+
+.boxMessageList--scroller::-webkit-scrollbar-track {
+  background-color: #F9FBFE;
+}
+
+.boxMessageList--scroller::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+  display: none;
+} 
+
+.boxMessageList--scroller::-webkit-scrollbar:vertical {
+  width:8px;
+}

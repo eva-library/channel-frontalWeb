@@ -1,0 +1,12 @@
+@import '../module';
+
+.buttonOutlined{
+  border: 1px solid #007EFF;
+  padding: 3%;
+  text-align: center;
+  color: #007EFF;
+  background-color: transparent;
+  font-weight: bold;
+  outline: none;
+  border-radius: 4px;
+}

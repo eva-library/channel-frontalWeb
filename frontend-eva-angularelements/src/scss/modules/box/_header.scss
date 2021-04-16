@@ -1,0 +1,96 @@
+@import '../module';
+
+.header{
+  background-color: $lightBackground;
+  //border-bottom: 1px solid rgba(57, 57, 57, 0.044);
+  display:flex;
+  flex-flow: row;
+  //padding: 1.5vh $defaultHorizontalPadding;
+  height: $headerHeight;
+  position: absolute;
+  z-index: 1;
+  width: $headerWidth;
+  align-items: flex-start;
+}
+
+.header--shadow{
+  position: absolute;
+  z-index: 1;
+  height: $shadowHeight;
+  background:linear-gradient(180deg, rgba(0,0,0,0.07746848739495793) 24%, rgba(237,237,237,0) 100%);
+  width:100%;
+  top:$headerHeight;
+}
+
+.header--botInfo{
+  flex-grow: 1;
+  display:flex;
+  flex-flow:column;
+  justify-content: center;
+}
+
+.header--avatar{
+  width: 56px;
+  // border-radius: 100%;
+  margin: 8px 24px 8px 24px;
+}
+
+
+.header--botStatus{
+  font-size: $sizeSubtitle1;
+  margin:0px;
+  height: 24px;
+  line-height:$sizeSubtitle1;
+  padding-top: 6px;
+}
+
+.header--botName{
+  font-size: $sizeTitle1;
+  margin:0px;
+  font-weight: bold;
+  color: #D5006C;
+  line-height:$sizeTitle1;
+
+}
+.header--close{
+  width: 16px;
+  cursor: pointer;
+  position: absolute;
+  align-self: center;
+  justify-self: center;
+  right:$defaultHorizontalPadding;
+}
+
+.header--botStatus > .is-online{
+  color:#767F9D;
+}
+
+.header--botStatus > .is-offline{
+  color:#767F9D;
+  opacity: 0.4;
+}
+
+
+
+.header--tile{
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  align-self: center;
+  justify-self: center;
+  margin:0px;
+  text-align: center;
+}
+
+
+
+@media only screen and (min-width: 45em){ //for tablets and desktop
+  .header{
+    // padding: 1vh $defaultHorizontalPadding;
+  }
+
+  .header--avatar{
+    
+  }
+}
+

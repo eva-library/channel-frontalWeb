@@ -1,0 +1,31 @@
+@import './src/scss/modules/box/header';
+@import './src/scss/modules/box/boxMessageControl';
+@import './src/scss/modules/box/boxMessageList';
+@import './src/scss/modules/box/boxMessage';
+@import './src/scss/modules/box/boxMessage-left';
+@import './src/scss/modules/box/boxMessage-right';
+@import './src/scss/modules/button/buttonOutlined';
+@import './src/scss/modules/button/buttonOutlined-primary';
+@import './src/scss/modules/button/buttonTray';
+@import './src/scss/modules/button/buttonOption';
+@import './src/scss/modules/button/buttonOptionSelected';
+@import './src/scss/modules/box/boxMessage-carousel';
+@import './src/scss/modules/box/boxMessage-video';
+@import './src/scss/modules/box/boxMessage-file';
+@import './src/scss/modules/box/boxMessage-image';
+@import './src/scss/modules/box/boxMessageBubbleOption';
+
+.custom-class {
+    position: fixed;
+    bottom: 35%;
+    right: 4%;
+    width: 370px;
+  }
+
+article.boxMessage.boxMessage-carousel {
+    height: 100%;
+    margin-top: 4%
+}
+.capa {
+  z-index: 2;
+}

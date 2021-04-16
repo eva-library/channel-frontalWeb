@@ -1,0 +1,49 @@
+<header class="header" *ngIf="localConfigService.config">
+    <div class="l-row  util-fullheight" *ngIf="headerType == HEADER_TYPE.CHAT">
+        <div class="util-fullheight">
+            <img class="header--avatar"
+                src="{{localConfigService.config.avatar}}" />
+        </div>
+        <div class="header--botInfo">
+            <h1 class="header--botName">Soy {{localConfigService.config.bot_name}}<small style="color:darkgray" >, asistente virtual de Transbank</small> </h1>
+            <div class="header--botStatus">
+                <p *ngIf="uiService.conected && !uiService.writing" class="is-online">Online</p>
+                <p *ngIf="uiService.conected && uiService.writing" class="is-online">{{localConfigService.config.typing}}</p>
+                <p *ngIf="!uiService.conected" class="is-offline">{{localConfigService.config.offline}}</p>
+            </div>
+        </div>
+
+        <img class="header--close" (click)="eventEndChat()" src="/assets/img/close.svg" />
+    </div>
+
+    <div class="l-row  util-fullheight" *ngIf="headerType == HEADER_TYPE.FEEDBACK_FORM">
+        <div class="util-fullheight">
+            <img class="header--avatar"
+                src="{{localConfigService.config.avatar}}" />
+        </div>
+        <div class="header--botInfo">
+            <h1 class="header--botName">{{localConfigService.config.before_you_go}}</h1>
+        </div>
+        <img class="header--close" (click)="eventCloseChat()"  src="/assets/img/close.svg" />
+    </div>
+
+
+
+    <div class="l-row" *ngIf="headerType == HEADER_TYPE.CUSTOMER_FORM">
+        <h1 class="header--tile">{{localConfigService.config.bot_name}}</h1>  
+        <img class="header--close" (click)="eventCloseChat()" src="/assets/img/close.svg" />
+    </div>
+
+
+
+
+    
+</header>
+
+<div class="header--shadow"></div>
+
+
+
+
+
+

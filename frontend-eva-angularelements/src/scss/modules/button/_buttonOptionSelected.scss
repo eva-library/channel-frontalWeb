@@ -1,0 +1,35 @@
+@import '../module';
+
+.buttonOptionSelected{
+  height: 41px;
+  font-size: 14px;
+  background-color: #007EFF;
+  border: 1px solid #007EFF;
+  color:  #EBF6FF;
+  border-radius: 4px;
+}
+
+.inputOptionSelected{
+  display: '';
+  height: 41px;
+  font-size: 14px;
+  background-color: transparent;
+  border: 1px solid #606060;
+  color: #606060;
+  padding:1vh 2vw;
+  margin-top: 5px;
+  text-align: left;
+  font-weight: bold;
+  outline: none;
+}
+
+.buttonConfirmSelected {
+  width: 80%;
+  height: 41px;
+  font-size: 14px;
+  background-color: #636363;
+  border: 1px solid #636363;
+  color: #EBF6FF;
+  margin-bottom: 12px;
+  border-radius: 4px;
+}

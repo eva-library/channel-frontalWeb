@@ -1,0 +1,53 @@
+@import '../module';
+
+.boxMessageControl{
+  height: $boxMessageControlHeight;
+  align-items: center;
+  display:flex;
+  padding: 0px $defaultHorizontalPadding;
+  height: 96px;
+}
+
+.boxMessageControl--input{
+  box-sizing: border-box;
+  height: 48px;
+  border: 1px solid #C9D0E4;
+  border-radius: 4px;
+  padding: 16px 10px 16px 16px;
+  outline: none;
+  flex-grow: 1;
+}
+
+.boxMessageControl--input::placeholder{
+  height: 16px;
+  color: #828EA5;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 16px;
+}
+
+.boxMessageControl--input:hover, .boxMessageControl--input:focus {
+  border: 1.5px solid #2D3338;
+  color: #2D3338
+}
+
+.boxMessageControl--send{
+  cursor: pointer;
+  height:40px;
+  width:40px;
+  border:none;
+  box-shadow: none;
+  margin-left: 10px;
+  background-color: #D8D8D8;
+  -webkit-mask: url('/assets/img/send.svg') no-repeat center;
+  mask: url('/assets/img/send.svg') no-repeat center;
+  mask-size: cover;
+}
+
+.boxMessageControl--send:hover{
+  background-color: #D5006C;
+}
+
+.boxMessageControl--input:hover ~ .boxMessageControl--send, .boxMessageControl--input:focus ~ .boxMessageControl--send {
+  background-color: #D5006C;
+}

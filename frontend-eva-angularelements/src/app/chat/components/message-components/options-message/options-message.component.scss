@@ -1,0 +1,11 @@
+.options-container {
+    width: 100%;
+    align-content: center;
+    align-items: center;
+}
+
+button {
+    overflow: hidden;
+    // white-space: nowrap;
+    text-overflow: ellipsis;
+}

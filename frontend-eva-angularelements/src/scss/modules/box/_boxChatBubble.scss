@@ -1,0 +1,31 @@
+@import '../module';
+
+.boxChatBubble {
+  height: 72px;
+  width: 72px;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  background-color: var(--primaryColor);
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  
+}
+
+
+.boxChatBubble--icon{
+  width:130%;
+}
+
+.rectangle {
+  box-sizing: border-box;
+  height: 56px;
+  width: 128px;
+  border: 1px solid #3FA7FF;
+  transform: scaleX(-1) scaleY(-1);
+  border-radius: 0 8px 8px 8px;
+  background-color: #EBF6FF;
+}

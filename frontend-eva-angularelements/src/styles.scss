@@ -1,0 +1,166 @@
+@import 'scss/util';
+@import 'scss/base';
+@import 'scss/variables';
+@import 'scss/layout/grid';
+@import 'scss/layout/layout';
+//@import '~material-icons/iconfont/material-icons.css';
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Material'),
+      local('MaterialIcons-Regular'),
+      url('/assets/fonts/Material/MaterialIcons-Regular.woff') format('woff');
+  }
+
+@font-face {
+    font-family: 'Frutiger';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Frutiger'), url('/assets/fonts/Frutiger/Frutiger.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'FrutigerBold';
+    font-style: normal;
+    font-weight: bold;
+    src: local('Frutiger Bold'), url('/assets/fonts/Frutiger/Frutiger_bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Garamond';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Garamond'), url('/assets/fonts/Garamond/unicode.garamond.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'GaramondRoman';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Garamond'), url('/assets/fonts/Garamond/Garamond_Roman.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'GaramondRegular';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Garamond'), url('/assets/fonts/Garamond/Garamond_Regular.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'GaramondMediumItalic';
+    font-style: italic;
+    font-weight: normal;
+    src: local('Garamond'), url('/assets/fonts/Garamond/Garamond_Italic.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'GaramondBold';
+    font-style: normal;
+    font-weight: bold;
+    src: local('Garamond'), url('/assets/fonts/Garamond/Garamond_Bold.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'PreloBook';
+    font-style: normal;
+    font-weight: normal;
+    src:  local('PreloBook'), url('/assets/fonts/Prelo/Prelo-Book.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'PreloBook';
+    src:url('/assets/fonts/Prelo/Prelo-Book.ttf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PreloBookBold';
+    src:url('/assets/fonts/Prelo/Prelo-Bold.ttf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Roboto';
+    src: url('./assets/fonts/Roboto/Roboto-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'RobotoBold';
+    src: url('./assets/fonts/Roboto/Roboto-Bold.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    --primaryColor: #ffffff;
+    --secondaryColor: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative;
+    font-size: 0.9em;
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: border-box;
+}
+.carousel-dots {
+    bottom: -15%!important;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+.carousel-dots .carousel-dot {
+    border: 2px solid #fff;
+    border-radius: 100px;
+    display: inline-block;
+    height: 13px!important;
+    margin: 4px;
+    width: 13px!important;
+    background-color: gray!important;
+}
+.carousel-dots .carousel-dot-active {
+    background-color: #2e8ec1!important;
+}
+.rectangle {
+    box-sizing: border-box;
+    height: 56px;
+    border: 1px solid #3FA7FF;
+    //transform: scaleX(-1) scaleY(-1);
+    border-radius: 0 8px 8px 8px;
+    background-color: #3FA7FF;
+    width: 130px!important;
+    //top: 914.118px!important;
+    //left: 804.674px!important;
+    
+  }

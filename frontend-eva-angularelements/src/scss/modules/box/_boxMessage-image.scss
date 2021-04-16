@@ -1,0 +1,23 @@
+@import '../module';
+
+.boxMessage-image{
+  
+}
+
+.boxMessage-image .boxMessage--bubble{
+
+
+  background: white;
+  padding: 0px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 3px #80808036;
+}
+
+.boxMessage-image .boxMessage--arrow{
+  border-top: 13px solid rgb(0, 77, 128);
+  border-right: 20px solid transparent;
+}
+
+.boxMessage-image .iframe{
+  border-radius: 10px;
+}

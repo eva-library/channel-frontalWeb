@@ -1,0 +1,182 @@
+<app-modal-image *ngIf="showModalImage" (action)="closeModal($event)" [backgroundWhite]="png" [urlImage]="image"></app-modal-image>
+
+<app-header [headerType]="HEADER_TYPE.CHAT" (onCloseChatBot)="fireCloseChatBot()"></app-header>
+
+<main class="l-container-main" >
+  <div class="boxMessageList">
+
+    <div #boxMessageListscroller class="boxMessageList--scroller">
+      <div  *ngFor="let chatMessage of chatService.chatMessages; index as i" class="capa">
+        
+        <!--For simple messages or messages with buttons-->
+        <article  *ngIf="i == 0 && (chatMessage.type == CHATTYPE.SIMPLETEXT || chatMessage.type == CHATTYPE.OPTIONS || chatMessage.type == CHATTYPE.TECHNICALTEXT)" [@newMessage]
+        [className]="chatMessage.bot ? 'boxMessage boxMessage-left capa' : 'boxMessage boxMessage-right'">
+          <div class="boxMessage--bubble--welcome capa" *ngIf=" i == 0">
+            <span *ngIf="chatMessage.message" [innerHTML]="chatMessage.message"></span>
+            <div *ngIf="chatMessage.buttons" class="buttonTray util-martop-10">
+              <button *ngFor="let item of chatMessage.buttons" class="buttonOutlined buttonOutlined-primary btn-groupVertical"  (mouseover)="activeButtonMouseOver($event, 'button')" (mouseout)="deactiveButtonMouseOut($event, 'button')"  (click)="pushMessage(CHATTYPE.SIMPLETEXT, chatMessage, item.name)">{{item.name}}</button>
+            </div>
+          </div>
+        </article>
+        <article  *ngIf="(chatMessage.type == CHATTYPE.SIMPLETEXT || chatMessage.type == CHATTYPE.OPTIONS || chatMessage.type == CHATTYPE.TECHNICALTEXT) && chatMessage.message" [@newMessage]
+        [className]="chatMessage.bot ? 'boxMessage boxMessage-left capa' : 'boxMessage boxMessage-right'">
+          <div class="boxMessage--bubble capa" *ngIf="i == 0">
+            <span *ngIf="chatMessage.technicalText.text">{{chatMessage.technicalText.text}}</span>
+          </div>
+          <div class="boxMessage--bubble capa" *ngIf="i >= 1">
+            <span *ngIf="chatMessage.message" [innerHTML]="chatMessage.message"></span>
+            <div  *ngIf="chatMessage.buttons" class="buttonTray util-martop-10">
+              <button *ngFor="let item of chatMessage.buttons" class="buttonOutlined buttonOutlined-primary buttonOption"  (mouseover)="activeButtonMouseOver($event, 'button')" (mouseout)="deactiveButtonMouseOut($event, 'button')"  (click)="pushMessage(CHATTYPE.SIMPLETEXT, chatMessage, item.name)">{{item.name}}</button>
+            </div>
+          </div>
+
+          <!--<div class="boxMessage--arrow"></div>-->
+          <span class="boxMessage--time">{{chatMessage.time}}</span>
+
+        </article>
+
+        <!--For simple messages with Technical Text (Options Form)-->
+        <article *ngIf="chatMessage.type == CHATTYPE.OPTIONSFORM && chatMessage.message" [@newMessage]
+        [className]="chatMessage.bot ? 'boxMessage boxMessage-left capa' : 'boxMessage boxMessage-right'" >
+
+          <div *ngIf="chatMessage.optionsForm.view !== 'list'" class="boxMessage--bubble capa">
+            <span *ngIf="chatMessage.message" [innerHTML]="chatMessage.message"></span>
+            <div *ngIf="chatMessage.optionsForm.options" class="btn-group-vertical boxMessage--options">
+                <div *ngFor="let item of chatMessage.optionsForm.options" class="row buttonTray">
+                  <button #optionsFormButton [id]="chatMessage.optionsForm.code+'_'+item.code+'_'+i"  class="buttonOutlined buttonOutlined-primary buttonOption" (mouseover)="activeButtonMouseOver($event, 'button')" (mouseout)="deactiveButtonMouseOut($event, 'button')" (click)="pushOption(chatMessage.optionsForm, item, i)">{{item.text}}</button>
+                  <input #optionsFormInput type="text" *ngIf="item.additionalText" [id]="chatMessage.optionsForm.code+'_'+item.code+'_'+i+'_TEXT'" class="inputOption" [placeholder]="item.question ? item.question: ''">
+                </div>
+            </div>
+            <div class="boxMessage--confirm">
+              <div class="text-center">
+                <hr class="hrOption">
+                <button #optionsFormButtonConfirm [id]="chatMessage.optionsForm.code+'_'+i+'_CONFIRM'" class="buttonOutlined buttonOutlined-primary buttonConfirm" (mouseover)="activeButtonMouseOver($event, 'confirm')" (mouseout)="deactiveButtonMouseOut($event, 'confirm')" (click)="sendOptions(chatMessage.optionsForm, i)">{{chatMessage.optionsForm.button}}</button>
+              </div>
+            </div>
+          </div>
+
+          <!--Visualización del listado de elementos añadidos desde una galería con carousel-->
+          <div *ngIf="chatMessage.optionsForm.view === 'list'" class="boxMessage--bubble capa">
+            <div *ngIf="chatMessage.message" [innerHTML]="chatMessage.message" class="boxMessage--message"></div>
+            <div *ngIf="chatMessage.optionsForm.options" class="boxMessage--options">
+              <div *ngFor="let item of chatMessage.optionsForm.options" class="row buttonTray boxMessage--divOptions">
+                <div class="row justify-content-start boxMessage--item">
+                  <div class="boxMessage--oval"></div>
+                  <div class="boxMessage--divText"><span>{{item.text}}</span></div>
+                  <div class="boxMessage--divItem row justify-content-end">
+
+                    <div class="boxMessage--divQuant">
+                      <span class="boxMessage--spanQuantText">Indica cantidad</span> 
+                      <input #optionsFormInput type="text" [id]="'quant_'+i+'_'+item.code" [value]="chatService.objListaMaterialesSeleccionados[item.code] ? chatService.objListaMaterialesSeleccionados[item.code] : item.quantity" [data-text]="item.text" class="boxMessage--spanQuantInput">
+                    </div>
+                    <div class="boxMessage--divImg" (click)="doActionList(item.code, 'ELIMINAR_PRODUCTO', i);">
+                      <img src="../../../../assets/img/trash_inactive.svg" (mouseout)="deactiveButtonMouseOut($event, 'image');" (mouseover)="activeButtonMouseOver($event, 'image');" class="boxMessage--imgDel">
+                    </div>
+
+                  </div>
+                  <hr class="boxMessage--hr">
+                </div>
+              </div>
+
+              <ng-template #modalWindowDelete let-modal>
+                <div class="modal-content custom-class">
+                  <div class="modal-body">¿Estás seguro que quieres eliminar el producto?</div>
+                  <div class="row justify-content-center">
+                    <div><button type="button" class="buttonNoDelete" data-dismiss="modal" (click)="modal.close('NO');">No eliminar</button></div>
+                    <div><button type="button" class="buttonYesDelete" (click)="modal.close('SI');">Sí, eliminar</button></div>
+                  </div>
+                </div>
+              </ng-template>
+
+            </div>
+            <span *ngIf="chatMessage.message" [innerHTML]="chatMessage.optionsForm.text" class="boxMessage--spanMessage"></span>
+
+            <div class="row justify-content-start boxMessage--buttons">
+              <div><button class="buttonAddProducts" (click)="doActionList('', chatMessage.optionsForm.buttons[0].accion, i)">{{chatMessage.optionsForm.buttons[0].text}}</button></div>
+              <div><button class="buttonConfirmProducts" (click)="doActionList('', chatMessage.optionsForm.buttons[1].accion, i)">{{chatMessage.optionsForm.buttons[1].text}}</button></div>
+            </div>
+
+          </div>
+
+          <!--<div class="boxMessage--arrow"></div>-->
+          <span class="boxMessage--time">{{chatMessage.time}}</span>
+
+        </article>
+
+        <!--For carousels messages-->
+        <article  *ngIf="chatMessage.type == CHATTYPE.CAROUSEL" class="boxMessage boxMessage-carousel capa">
+          <app-carousel [items]="chatMessage.caruselItems"></app-carousel>
+          <!-- <div class="boxMessage--arrow"></div> -->
+          <span class="boxMessage--time">{{chatMessage.time}}</span>
+        </article>
+
+
+        <!-- For images-->
+        <article  *ngIf="chatMessage.type == CHATTYPE.IMAGE" class="boxMessage boxMessage-image capa" (click)="showModal(chatMessage.image, chatMessage.image)">
+          <div class="boxMessage--bubble capa">
+            <img class="boxMessage--photo" src="{{chatMessage.image}}">
+          </div>
+          <span class="boxMessage--time">{{chatMessage.time}}</span>
+        </article>
+
+
+        <!-- For video-->
+        <article  *ngIf="chatMessage.type == CHATTYPE.VIDEO" class="boxMessage boxMessage-video capa">
+          <div class="boxMessage--bubble capa">
+            <iframe width="100%" [src]="chatMessage.video | safe" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <!-- <div class="boxMessage--arrow"></div> -->
+          <span class="boxMessage--time">{{chatMessage.time}}</span>
+        </article>
+  
+
+        <!-- For audio-->
+        <div *ngIf="chatMessage.type == CHATTYPE.AUDIO" class="chat-audio">
+          
+          <figure>
+            <audio
+                controls
+                
+                [src]="chatMessage.audio | safe">
+                    Your browser does not support the
+                    <code>audio</code> element.
+            </audio>
+        </figure>
+        </div>
+
+
+        <!-- For files -->
+        <article  *ngIf="chatMessage.type == CHATTYPE.FILE" class="boxMessage boxMessage-file capa">
+          <div class="boxMessage--bubble capa">
+
+            <div class="l-row">
+                <span class="boxMessage--filename" (click)="download_file(chatMessage.attachment, chatMessage.label)">{{chatMessage.label}}</span>
+                
+                <img class="boxMessage--fileicon util-marleft-20" (click)="download_file(chatMessage.attachment, chatMessage.label)" height="20" src="/assets/img/download.svg" />
+            </div>
+
+          </div>
+          <!--<div class="boxMessage--arrow"></div>-->
+          <span class="boxMessage--time">{{chatMessage.time}}</span>
+        </article>
+
+    </div>
+    </div>
+    <div class="boxMessageList--shadow"></div>
+  </div>
+  <app-chat-input-box></app-chat-input-box>
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

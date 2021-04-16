@@ -1,0 +1,133 @@
+.util-talign-center{
+  text-align: center;
+  
+}
+
+.util-talign-right{
+  text-align: right;
+  align-items: flex-end;
+  justify-content: right;
+  
+}
+ 
+
+.util-middle{
+  align-items: center;
+}
+
+.util-hide{
+  display: none;
+}
+
+
+.util-expanded{
+  flex-grow: 1;
+}
+
+
+.util-fullheight{
+  height: 100%;
+}
+
+.util-selfcenter{
+  align-self: center;
+}
+
+
+$widths: 0;
+
+@while $widths < 800 {
+    $widths : $widths + 25;
+    .util-width-#{$widths}{
+      width:#{$widths}px;
+    }
+}
+
+
+@for $amount from 0 to 100 {
+
+
+  .util-height-#{$amount}{
+    height:#{$amount}px;
+  }
+
+
+  //for all sides
+   .util-padall-#{$amount}{
+     padding:#{$amount}px;
+   }
+   .util-marall-#{$amount}{
+     margin:#{$amount}px;
+   }
+
+
+   //for margin
+   .util-martop-#{$amount}{
+     margin-top:#{$amount}px;
+   }
+
+   .util-martop--#{$amount}{
+    margin-top:-#{$amount}px;
+  }
+
+   .util-marbot-#{$amount}{
+     margin-bottom:#{$amount}px;
+   }
+
+   .util-marleft-#{$amount}{
+    margin-left:#{$amount}px;
+  }
+
+  .util-marright-#{$amount}{
+    margin-right:#{$amount}px;
+  }
+
+  .util-marvert-#{$amount}{
+    margin-top:#{$amount}px;
+    margin-bottom:#{$amount}px;
+  }
+
+
+  .util-marhori-#{$amount}{
+    margin-left:#{$amount}px;
+    margin-right:#{$amount}px;
+  }
+
+
+   //for padding
+   .util-padtop-#{$amount}{
+    padding-top:#{$amount}px;
+  }
+
+  .util-padbot-#{$amount}{
+    padding-bottom:#{$amount}px;
+  }
+
+  .util-padleft-#{$amount}{
+    padding-left:#{$amount}px;
+  }
+
+  .util-padright-#{$amount}{
+    padding-right:#{$amount}px;
+  }
+
+
+  .util-padvert-#{$amount}{
+    padding-top:#{$amount}px;
+    padding-bottom:#{$amount}px;
+  }
+
+
+  .util-padhori-#{$amount}{
+    padding-left: #{$amount}px;
+    padding-right: #{$amount}px;
+  }
+
+  * {
+    --primaryColor: #EBF6FF;
+    --secondaryColor: #F4F4F4;
+  }
+  
+
+}
+

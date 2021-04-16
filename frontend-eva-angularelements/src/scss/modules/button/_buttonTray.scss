@@ -1,0 +1,25 @@
+@import '../module';
+
+.buttonTray{
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 4px;
+  height: 41px;
+  margin-bottom: 6px;
+}
+
+.buttonTray > button{
+  margin: 5px 10.4px 0px 0px;
+}
+
+// .buttonTray > button:first-child{
+//   margin: 2% 0% !important;
+// }
+
+
+
+@media only screen and (min-width: 45em){ //for tablets and desktop
+  .buttonTray > button{
+    // margin: 5px 1vw 0px 0px;
+  }  
+}

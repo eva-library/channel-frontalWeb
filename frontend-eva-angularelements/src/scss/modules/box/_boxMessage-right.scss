@@ -1,0 +1,18 @@
+@import '../module';
+
+.boxMessage-right{
+  align-items: flex-end;
+  
+}
+
+.boxMessage-right .boxMessage--bubble{
+  background-color: #EEEEEE;
+  color:rgb(106, 107, 109);
+  border-radius: 8px 8px 0 8px;
+  max-width: 80%;
+}
+
+.boxMessage-right .boxMessage--arrow{
+  border-top: 13px solid #EEEEEE;
+  border-left: 20px solid transparent;
+}

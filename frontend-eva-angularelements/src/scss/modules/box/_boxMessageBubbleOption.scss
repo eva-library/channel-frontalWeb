@@ -1,0 +1,10 @@
+@import '../module';
+
+.bubbleOption {
+    padding:0;
+    max-width: 80%;
+    display:inline-flex;
+    flex-direction: column;
+    margin:3% $defaultHorizontalPadding 0% $defaultHorizontalPadding;
+    font-size: $sizeBody1;
+}

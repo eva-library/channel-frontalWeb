@@ -1,0 +1,107 @@
+<app-header [headerType]="HEADER_TYPE.FEEDBACK_FORM"  (onCloseChatFeedback)="fireCloseFeedback()"></app-header>
+
+<main class="l-container-main">
+  <div class="boxMessageList">
+
+    <div class="boxMessageList--scroller">
+
+      <div *ngIf="!complete">
+        <div class="feedback-form d-flex col-12 mx-auto flex-column align-items-center">
+    
+          <!-- <p class="my-2 mx-auto col-11 py-2">{{localConfigService.config.feedback_message_01}}</p> -->
+          <div class="info">
+            <p >Queremos conocer tu opinión sobre </p> 
+             <p>el servicio que te hemos brindado. </p> 
+          </div>
+          <div class="my-1 mx-auto col-11">
+            <!-- <label class="form-label">{{localConfigService.config.feedback_message_02}} </label> -->
+            <h1 class="text">¿Cómo fue tu experiencia? </h1>
+            <div class="form-radio-options-container">
+              <label [className]="feedback.experience === 3 ? 'selected-label mr-2 mb-0': 'no-selected-label mr-2 mb-0'"
+                (click)="(feedback.experience = 3)">
+                <img src='../../../../assets/img/cara_feliz.svg'>
+              </label>
+              <label [className]="feedback.experience === 2 ? 'selected-label mr-2 mb-0': 'no-selected-label mr-2 mb-0'"
+                (click)="(feedback.experience = 2)">
+                <img src='../../../../assets/img/cara_intermedio.svg'>
+              </label>
+              <label [className]="feedback.experience === 1 ? 'selected-label mr-2 mb-0': 'no-selected-label mr-2 mb-0'"
+                (click)="(feedback.experience = 1)">
+                <img src='../../../../assets/img/cara_insatisfecho.svg'>
+              </label>
+            </div>
+          </div>
+    
+          <div class="my-1 mx-auto col-11 form-div-textarea">
+            <label class="form-label">Déjanos tu comentario</label>
+            <textarea #comments name="comments" id="comments" placeholder="Escribe tu comentario" ></textarea>
+            <!-- <label class="form-label">{{localConfigService.config.feedback_message_03}} </label>
+            <textarea #comments name="comments" id="comments" placeholder="{{localConfigService.config.write_your_opinion}}" ></textarea> -->
+          </div>
+    
+          <button class="form-button" [disabled]="false" (click)="sendFeedback()">{{localConfigService.config.feedback_send_button}} </button>
+    
+        </div>
+      </div>
+      <div class="complete-message" *ngIf="complete">
+        <img  class="col-10 mb-3 rounded-circle" src="{{localConfigService.config.avatar}}" alt="ThankUImg" (load)="showThanks = true" [@fadeIn]>
+        <p *ngIf="showThanks" [@fadeIn]>{{localConfigService.config.feedback_greeting}} </p>
+      </div>
+          
+
+
+
+     </div>
+     <div class="boxMessageList--shadow"></div>
+  </div>
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="fluid-container feedback-container">
+
+  <div *ngIf="!complete">
+    <div class="feedback-form d-flex col-12 mx-auto flex-column align-items-center">
+
+      <p class="my-2 mx-auto col-11 col-sm-8 col-md-6 col-lg-5 py-2"> <strong> {{localConfigService.config.feedback_message_01}} </strong></p>
+      <div class="my-1 mx-auto col-11 col-sm-8 col-md-6 col-lg-5">
+        <label class="form-label">{{localConfigService.config.feedback_message_02}} </label>
+        <div class="form-radio-options-container">
+          <label [className]="feedback.experience === 1 ? 'selected-label mr-2 mb-0': 'no-selected-label mr-2 mb-0'"
+            (click)="(feedback.experience = 1)">👍</label>
+          <label [className]="feedback.experience === 2 ? 'selected-label ml-2 mb-0': 'no-selected-label ml-2 mb-0'"
+            (click)="(feedback.experience = 2)">👎</label>
+        </div>
+      </div>
+
+      <div class="my-1 mx-auto col-11 col-sm-8 col-md-6 col-lg-5">
+        <label class="form-label">{{localConfigService.config.feedback_message_03}} </label>
+        <textarea #comments name="comments" id="comments" cols="30" rows="4" maxlength="1000"
+        placeholder="{{localConfigService.config.write_your_opninion}}" class="w-100 my-2"></textarea>
+      </div>
+
+      <button class="btn btn-primary px-4 my-2" [style.background-color]="localConfigService.config.primary_color" [disabled]="false" (click)="sendFeedback()">{{localConfigService.config.feedback_send_button}} </button>
+
+    </div>
+  </div>
+  <div class="complete-message" *ngIf="complete">
+    <img class="col-10 mb-3 rounded-circle" src="{{localConfigService.config.avatar}}" alt="ThankUImg" (load)="showThanks = true" [@fadeIn]>
+    <p *ngIf="showThanks" [@fadeIn]>{{    <img class="col-10 mb-3 rounded-circle" src="{{localConfigService.config.avatar}}" alt="ThankUImg" (load)="showThanks = true" [@fadeIn]>
+.config.feedback_greeting}} </p>
+  </div>
+</div> -->

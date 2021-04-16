@@ -1,0 +1,43 @@
+@import '../module';
+
+.boxChatPopup {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top:0px;
+  
+}
+
+.boxChatPopup .iframe {
+  height: 80%;
+  width: 100%;
+  border: none;
+  box-shadow: 0px 0px 10px 1px gray;
+  
+}
+
+
+
+@media only screen and (min-width: $minWidthTablets){ //for tablets and tablets
+  .boxChatPopup{
+    height: 80%;
+    width: 450px;
+    bottom:20px;
+    right:20px;
+    top:auto;
+  }
+
+  .boxChatPopup .iframe{
+    border-radius: 12px;
+  }
+}
+
+// @media only screen and (min-width: $minWidthDesktop){ //for tablets and desktop
+//   .boxChatPopup{
+//     height: 80%;
+//     width: 400px;
+//     bottom:20px;
+//     right:20px;
+//     top:auto;
+//   }
+// }

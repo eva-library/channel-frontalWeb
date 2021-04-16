@@ -1,0 +1,19 @@
+@import '../module';
+
+.boxMessage-file{
+  
+}
+
+.boxMessage-file .boxMessage--bubble{
+  background-color: var(--primaryColor);
+  color:white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  align-self: flex-start;
+}
+
+.boxMessage-file .boxMessage--arrow{
+  border-top: 13px solid var(--primaryColor);
+  border-right: 20px solid transparent;
+}

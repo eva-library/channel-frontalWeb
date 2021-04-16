@@ -1,0 +1,26 @@
+<main > 
+
+  <div class="boxChatBubble" *ngIf="!chatOpen" (click)="openChat({data: {type : 'chatbubble', state: true}})" >
+    <div tooltip-class="rectangle" tooltip="¿En qué te puedo ayudar?" placement="left" width="130" offset="1" show-delay="500">
+      <span  class="boxChatBubble--icon" >
+        <img src="/assets/img/chat-tania.svg" />
+      </span>
+    </div>
+  </div>
+
+  <div  class="boxChatPopup" *ngIf="chatOpen">
+    <div class="iframe">
+      <body style="--primaryColor:#EBF6FF; --secondaryColor:#F4F4F4;">
+        <div *ngIf="!isFeedback" class="cuerpo-body" >
+          <app-chat (onCloseChatBot)="closeChatBot()"></app-chat>
+        </div>
+        <div *ngIf="isFeedback" class="cuerpo-body">
+          <app-feedback-form (onCloseChatFeedback)="closeChAtFeedback()"></app-feedback-form>
+        </div>
+      </body>
+    </div>
+
+  </div>
+
+  
+</main>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>2FDAFC4A-ED8D-43FA-A14B-2E8F3738D48A</title>
+    <defs>
+        <polygon id="path-1" points="2.8e-05 0.16492 41.83508 0.16492 41.83508 42 2.8e-05 42"></polygon>
+    </defs>
+    <g id="CHAT-TANIA" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="CHAT-TANIA-09" transform="translate(-976.000000, -424.000000)">
+            <g id="Group-2" transform="translate(776.000000, 208.000000)">
+                <g id="icon-/-48-/-cara-intermedio" transform="translate(200.000000, 216.000000)">
+                    <g id="Group-11" transform="translate(3.000000, 3.000000)">
+                        <g id="Group-3">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Clip-2"></g>
+                            <path d="M41.835108,21.082432 C41.835108,32.634672 32.469948,42.000112 20.917428,42.000112 C9.365468,42.000112 2.8e-05,32.634672 2.8e-05,21.082432 C2.8e-05,9.529912 9.365468,0.164752 20.917428,0.164752 C32.469948,0.164752 41.835108,9.529912 41.835108,21.082432" id="Fill-1" fill="#FFC058" mask="url(#mask-2)"></path>
+                        </g>
+                        <rect id="Rectangle" fill="#B7782C" x="9.54545455" y="27.6818182" width="23.8636364" height="1.90909091" rx="0.954545455"></rect>
+                        <path d="M13.3135049,18.5722 C11.6835072,18.5722 10.3609388,17.2716937 10.3609388,15.6670861 C10.3609388,14.0622 11.6835072,12.7616937 13.3135049,12.7616937 C14.9443519,12.7616937 16.2672035,14.0622 16.2672035,15.6670861 C16.2672035,17.2716937 14.9443519,18.5722 13.3135049,18.5722 Z" id="Fill-6" fill="#B7782C"></path>
+                        <path d="M28.8018518,18.5722 C27.1712879,18.5722 25.8484364,17.2716937 25.8484364,15.6670861 C25.8484364,14.0622 27.1712879,12.7616937 28.8018518,12.7616937 C30.4324157,12.7616937 31.754701,14.0622 31.754701,15.6670861 C31.754701,17.2716937 30.4324157,18.5722 28.8018518,18.5722 Z" id="Fill-8" fill="#B7782C"></path>
+                    </g>
+                    <rect id="Rectangle" fill="#D8D8D8" opacity="0" x="0" y="0" width="48" height="48"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

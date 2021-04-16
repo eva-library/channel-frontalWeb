@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="21px" viewBox="0 0 20 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>75865A15-7345-489B-B130-50BDE5EA352D</title>
+    <defs>
+        <path d="M19,4 L18,4 L14,4 L14,2.328 C14,1.044 12.879,0 11.5,0 L8.5,0 C7.121,0 6,1.044 6,2.328 L6,4 L2,4 L1,4 C0.45,4 0,4.45 0,5 C0,5.55 0.45,6 1,6 L2,6 L2,17 C2,18.654 3.346,20 5,20 L15,20 C16.654,20 18,18.654 18,17 L18,6 L19,6 C19.55,6 20,5.55 20,5 C20,4.45 19.55,4 19,4 L19,4 Z M8,2.328 C8,2.173 8.214,2 8.5,2 L11.5,2 C11.786,2 12,2.173 12,2.328 L12,4 L8,4 L8,2.328 Z M16,17 C16,17.551 15.552,18 15,18 L5,18 C4.448,18 4,17.551 4,17 L4,6 L16,6 L16,17 Z M14,14 C14,14.55 13.55,15 13,15 C12.45,15 12,14.55 12,14 L12,10 C12,9.45 12.45,9 13,9 C13.55,9 14,9.45 14,10 L14,14 Z M8,14 C8,14.55 7.55,15 7,15 C6.45,15 6,14.55 6,14 L6,10 C6,9.45 6.45,9 7,9 C7.55,9 8,9.45 8,10 L8,14 Z" id="path-1"></path>
+    </defs>
+    <g id="Ajustes-Tania" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="07.1-CHAT-TANIA-Solicitud-insumos" transform="translate(-1155.000000, -512.000000)">
+            <g id="Group-8" transform="translate(792.000000, 385.000000)">
+                <g id="Group-4-Copy-2" transform="translate(363.000000, 127.142857)">
+                    <g id="icon-/-outline-/-24-/-trash" transform="translate(0.000000, 0.714286)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mask" fill="#737F87" xlink:href="#path-1"></use>
+                        <g id="color-/-grayicon" mask="url(#mask-2)">
+                            <g transform="translate(-2.000000, -2.000000)">
+                                <rect id="Rectangle" fill="#707382" x="0" y="0" width="24" height="24"></rect>
+                                <rect id="Rectangle-Copy-3" fill="#D5006C" x="2" y="2" width="20" height="20"></rect>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,26 @@
+@import '../module';
+
+.boxMessage-left{
+  
+}
+
+.boxMessage-left .boxMessage--bubble{
+  background-color: var(--primaryColor);
+  color: #767F9D;
+  font-size: 14px;
+  line-height: 22px;
+  border-radius: 0 8px 8px 8px;
+}
+
+.boxMessage-left .boxMessage--bubble--welcome{
+  background-color: var(--primaryColor);
+  color: #767F9D;
+  font-size: 14px;
+  line-height: 22px;
+  border-radius: 0 8px 8px 8px;
+}
+
+.boxMessage-left .boxMessage--arrow{
+  border-top: 13px solid var(--primaryColor);
+  border-right: 20px solid transparent;
+}

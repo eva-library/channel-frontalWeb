@@ -1,0 +1,79 @@
+<div class="container-fluid p-0" *ngIf="contentLoaded && localConfigService.config != null">
+
+  <div class="content row col-12 mx-auto d-flex flex-column align-items-center">
+
+    <div class="container col-12 col-md-6 col-lg-3">
+      <img src="{{remoteConfigService.config.avatar}}" class=" mx-auto d-block mt-4 mb-1" alt="avatar-img">
+    </div>
+
+    <p class="customer-text col-11 col-md-6 col-lg-3" [innerHTML]="remoteConfigService.config.welcome_message"></p>
+
+    <form (ngSubmit)="onSubmit()" #customerForm="ngForm" class="d-flex col-12 flex-column align-items-center">
+
+      <div class="my-2 mx-auto col-sm-12 col-md-6 col-lg-3">
+        <label [style.color]="remoteConfigService.config.secondary_color" class="form-label" for="name">Nombre</label>
+        <input type="text" class="form-control" id="name" required [(ngModel)]="customer.name" name="name"
+          #name="ngModel" minlength="3" placeholder=""
+          pattern="[a-zA-ZÑñÁÀÄÂáàäâÉÈËÊéèëêÍÌÏÎíìïîÓÒÖÔóòöôÚÙÜÛúùüû´`' ]*" />
+        <div [hidden]="name.valid || name.pristine" class="alert alert-danger input-alert">
+          <div *ngIf="name.errors?.required">
+            Este campo es requerido.
+          </div>
+          <div *ngIf="name.errors?.minlength">
+            Por favor introduce tus nombres y tus apellidos.
+          </div>
+          <div *ngIf="name.errors?.pattern">
+            Solo puedes introducir letras.
+          </div>
+        </div>
+      </div>
+      <div class="my-2 mx-auto col-sm-12 col-md-6 col-lg-3">
+        <label [style.color]="remoteConfigService.config.secondary_color" class="form-label" for="name">Nro Documento</label>
+        <input type="tel" class="form-control" id="phoneNumber" required [(ngModel)]="customer.phoneNumber"
+          name="phoneNumber" #phoneNumber="ngModel" minlength="7" maxlength="13" placeholder=""
+          pattern="^\d+$" />
+        <div [hidden]="phoneNumber.valid || phoneNumber.pristine" class="alert alert-danger input-alert">
+          <div *ngIf="phoneNumber.errors?.required">
+            Este campo es requerido.
+          </div>
+          <div *ngIf="phoneNumber.errors?.minlength">
+            Debes incluir un número de al menos 7 dígitos.
+          </div>
+          <div *ngIf="phoneNumber.errors?.maxlength">
+            Máximo 13 caracteres.
+          </div>
+          <div *ngIf="phoneNumber.errors?.pattern">
+            Solo puedes introducir números del 0 al 9.
+          </div>
+        </div>
+      </div>
+      
+      <div class="my-2 mx-auto col-sm-12 col-md-6 col-lg-3">
+        <label [style.color]="remoteConfigService.config.secondary_color" class="form-label" for="name">Correo electrónico</label>
+        <input type="text" class="form-control" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}$" id="email"
+          required [(ngModel)]="customer.email" name="email" #email="ngModel" placeholder="" />
+        <div [hidden]="email.valid || email.pristine" class="alert alert-danger input-alert">
+          <div *ngIf="email.errors?.required">
+            Este campo es requerido.
+          </div>
+          <div *ngIf="email.errors?.pattern">
+            No es un correo válido.
+          </div>
+        </div>
+      </div>
+
+      <div class="my-2 mx-auto col-sm-12 col-md-6 col-lg-3">
+       
+          <button [style.color]="remoteConfigService.config.text_button_color" 
+          [style.background-color]="remoteConfigService.config.button_background" 
+          [style.border-color]="remoteConfigService.config.secondary_color" 
+          class="btn btn-primary px-4 my-2 cursor-pointer btn-decorate"
+           [disabled]="!customerForm.form.valid"
+            type="submit">Entrar al
+            chat</button>
+     
+      </div>
+     
+    </form>
+  </div>
+</div>

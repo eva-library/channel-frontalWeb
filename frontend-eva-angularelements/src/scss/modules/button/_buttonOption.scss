@@ -1,0 +1,74 @@
+@import '../module';
+
+.buttonOption{
+  height: 41px;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -0.24px;
+  background-color: transparent;
+  border: 1px solid #007EFF;
+  color: #007EFF;
+  border-radius: 4px;
+  min-width: 100px;
+}
+
+.btn-groupVertical {
+  height: 41px;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -0.24px;
+  background-color: transparent;
+  border: 1px solid #007EFF;
+  color: #007EFF;
+  padding: 10px 24px; 
+  width: 100%; 
+  display: block; 
+}
+
+.buttonOptionHover{
+  height: 41px;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -0.24px;
+  background-color: #007EFF;
+  border: 1px solid #007EFF;
+  color: #EBF6FF;
+  border-radius: 4px;
+  min-width: 100px;
+}
+
+.inputOption{
+  display: none;
+}
+
+.hrOption {
+  width: 100%;
+  text-align: center;
+  color: #c2c2c2;
+}
+
+.buttonConfirm {
+  width: 80%;
+  height: 41px;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -0.24px;
+  background-color: #939393;
+  border: 1px solid #939393;
+  color: #EBF6FF;
+  margin-bottom: 12px;
+  border-radius: 4px;
+}
+
+.buttonConfirmHover {
+  width: 80%;
+  height: 41px;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -0.24px;
+  background-color: #636363;
+  border: 1px solid #636363;
+  color: #EBF6FF;
+  margin-bottom: 12px;
+  border-radius: 4px;
+}

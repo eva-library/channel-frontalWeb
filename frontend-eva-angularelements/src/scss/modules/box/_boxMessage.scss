@@ -1,0 +1,245 @@
+@import '../module';
+
+.boxMessage {
+  display: flex;
+  flex-direction: column;
+}
+
+.boxMessage--bubble{
+  padding:13px 13px;
+  max-width: 100%;
+  display:inline-flex;
+  flex-direction: column;
+  margin:3% $defaultHorizontalPadding 0% $defaultHorizontalPadding;
+  font-size: $sizeSubtitle2;
+}
+
+.boxMessage--bubble--welcome{
+  padding: 13px 13px 100px 13px;
+  max-width: 100%;
+  display:inline-flex;
+  flex-direction: column;
+  margin:3% $defaultHorizontalPadding 0% $defaultHorizontalPadding;
+  font-size: $sizeBody1;
+}
+
+
+.boxMessage--time{
+  color:rgb(167, 167, 167);
+  margin:auto 4%;
+  font-size: $sizeSubtitle1;
+  padding-top: 6px;
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+
+.boxMessage--arrow{
+  width: 0;
+  height: 0;
+  margin:0px 4%;
+}
+
+.boxMessage--photo{
+  width:100%;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.boxMessage--filename{
+  text-decoration: underline;
+  line-height: 20px;
+  text-underline-position: under;
+  cursor: pointer;
+}
+
+.boxMessage--fileicon{
+  cursor: pointer;
+}
+
+.boxMessage--options{
+  margin-top: 3px;
+  padding-left: 14px;
+}
+
+.boxMessage--divOptions{
+  margin-top: 14px;
+}
+
+.boxMessage--divText{
+  height: 24px;
+  width: 156px;
+  color: #767F9D;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 22px;
+  padding-top: 2px;
+}
+
+.boxMessage--divQuant{
+  height: 24px;
+  width: 125px;
+}
+
+.boxMessage--spanQuantText {
+  height: 16px;
+  width: 97px;
+  color: #767F9D;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 16px;
+  padding-right: 5px;
+}
+
+.boxMessage--spanQuantInput{
+  box-sizing: border-box;
+  height: 24px;
+  width: 24px;
+  border: 1px solid #BFC5D2;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  text-align: center;
+  line-height: 16px;
+  letter-spacing: 0;
+  font-size: 14px;
+  color: #767F9D;
+}
+
+.boxMessage--divImg {
+  height: 25px;
+  width: 25px;
+}
+
+.boxMessage--imgDel {
+  height: 25px;
+  width: 25px;
+  background-color: transparent;
+  cursor: pointer
+}
+
+.boxMessage--item {
+  //box-sizing: border-box;
+  //border-bottom: 1px solid #747FA0;
+  border-bottom-width: 358.86px;
+  width: 358.86px;
+  padding-left: 36px;
+}
+
+.boxMessage--message{
+  height: 24px;
+  width: 360px;
+  color: #767F9D;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 22px;
+  padding-bottom: 45px;
+  padding-left: 20px;
+  padding-top: 12px;
+}
+
+.boxMessage--buttons {
+  height: 40px;
+  //width: 360px;
+}
+
+.boxMessage--hr{
+  box-sizing: border-box;
+  height: 1px;
+  width: 358.86px;
+  border: 1px solid #747FA0;
+  opacity: 0.4;
+  margin-left: 6px;
+}
+
+.boxMessage--spanMessage {
+  padding-left: 20px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.buttonAddProducts {
+  box-sizing: border-box;
+  height: 41px;
+  width: 159px;
+  border: 1px solid #007EFF;
+  border-radius: 4px;
+  color: #007EFF;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.24px;
+  line-height: 16px;
+  background-color: transparent;
+  margin-left: 30px;
+}
+
+.buttonConfirmProducts {
+  box-sizing: border-box;
+  height: 41px;
+  width: 159px;
+  border: 1px solid #007EFF;
+  border-radius: 4px;
+  background-color: #007EFF;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.24px;
+  line-height: 16px;
+  text-align: center;
+  margin-left: 24px;
+}
+
+.boxMessage--divItem{
+  width: 180px;
+}
+
+.boxMessage--oval{
+  height: 6px;
+  width: 6px;
+  background-color: #767F9D;
+  border-radius: 3px;
+  margin-top: 11px;
+  margin-right: 5px;
+}
+
+.buttonNoDelete {
+  box-sizing: border-box;
+  height: 40px;
+  width: 161px;
+  border: 1px solid #D5006C;
+  border-radius: 4px;
+  color: #D5006C;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.27px;
+  line-height: 19px;
+  text-align: center;
+  background-color: transparent;
+  margin-left: -11px;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.buttonYesDelete {
+  box-sizing: border-box;
+  height: 40px;
+  width: 161px;
+  border: 1px solid #D5006C;
+  border-radius: 4px;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.27px;
+  line-height: 19px;
+  text-align: center;
+  background-color: #D5006C;
+  margin-left: 11px;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+@media only screen and (min-width: 45em){ //for tablets and desktop
+  .boxMessage--bubble{
+    // padding:2vh 1.5vw;
+  }  
+}

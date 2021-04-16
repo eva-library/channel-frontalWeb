@@ -1,0 +1,91 @@
+@import '../variables';
+
+.l-row{
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.l-row-wrap{
+    @extend .l-row;
+    flex-wrap: wrap;
+}
+
+.l-row-reverse{
+    @extend .l-row;
+    flex-direction: row-reverse;
+}
+
+.l-row-centered{
+    @extend .l-row;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.l-row-left{
+    position: absolute;
+    left: 120px;
+    width: auto;
+    border: 3px solid #8ad1df;
+    padding: 20px;
+    margin-top: 200px;
+}
+
+.l-row-middle{
+    @extend .l-row;
+    align-items: center;
+}
+
+
+.l-row-right{
+    display:flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+.l-column{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.l-column-middle{
+    @extend .l-column;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .l-row-left {
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    left: 50px;
+  }
+}
+
+@for $i from 1 through 12{
+    $width: ($i/12) * 100%;
+    .col-#{$i}{
+        width:$width;
+        padding:$gutterMobile;
+    }
+
+    @media only screen and (min-width: $minWidthTablets){ //for tablets
+        .col-md-#{$i}{
+            width:$width;
+            padding:$gutterMobile;
+        }
+    }
+
+    @media only screen and (min-width: $minWidthDesktop){ //for tablets
+        .col-large-#{$i}{
+            width:$width;
+            padding:$gutterMobile;
+        }
+    }
+}
+
+
+

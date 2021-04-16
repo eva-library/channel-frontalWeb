@@ -1,0 +1,28 @@
+@import '../module';
+
+.boxMessage-video{
+  
+}
+
+.boxMessage-video .boxMessage--bubble{
+  // background-color: rgb(0, 77, 128);
+  // color:white;
+  // border-top-left-radius: 10px;
+  // border-top-right-radius: 10px;
+  // border-bottom-right-radius: 10px;
+  // padding: 1%;
+
+  background: white;
+  padding: 0px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 3px #80808036;
+}
+
+.boxMessage-video .boxMessage--arrow{
+  border-top: 13px solid rgb(0, 77, 128);
+  border-right: 20px solid transparent;
+}
+
+.boxMessage-video .iframe{
+  border-radius: 10px;
+}

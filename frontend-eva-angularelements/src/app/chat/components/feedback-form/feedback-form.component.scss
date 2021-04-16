@@ -1,0 +1,127 @@
+@import './src/scss/modules/input/inputSimple';
+@import './src/scss/modules/button/buttonSolid';
+@import './src/scss/modules/box/boxMessageList';
+
+.feedback-container {
+  background-color: var(--container-background);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 90%;
+  overflow: hidden;
+}
+
+.feedback-form > p {
+  height: 112px;
+  color: #212830;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.01px;
+  line-height: 22px;
+  text-align: center;
+  padding: 0;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.form-radio-options-container {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 16px;
+}
+
+.selected-label {
+  //font-size: 2.5rem;
+  padding-top: 0px;
+}
+
+.no-selected-label {
+  padding-top: 16px;
+}
+
+.form-label {
+  color: #767F9D;
+  font-size: 14px;
+  letter-spacing: 0.01px;
+  line-height: 22px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.form-div {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.form-div-textarea {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+textarea {
+  box-sizing: border-box;
+  height: 80px;
+  width: 370px;
+  border: 1px solid #C9D0E4;
+  color: #2D3338;
+  border-radius: 4px;
+  resize: none;
+  margin-top:16px;
+  outline: 0 none;
+}
+
+textarea::placeholder{
+  color: #767F9D;
+  font-size: 14px;
+}
+
+.complete-message {
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-button{
+  height: 48px;
+  width: 216px;
+  font-size: 18px;
+  letter-spacing: -0.31px;
+  line-height: 21px;
+  text-align: center;
+  background-color: #F5F7FA;
+  border: none;
+  color: #BFC5D2;
+  text-decoration: none;
+  display: inline-block;
+}
+.text {
+  height: 22px;
+  width: 350px;
+  color: #212830;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0.01px;
+  line-height: 22px;
+  text-align: center;
+}
+
+.info {
+  padding-top: 20px;
+  height: 64px;
+  width: 400px;
+  color: #767F9D;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 16px;
+  text-align: center;
+}
