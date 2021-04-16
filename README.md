@@ -1,7 +1,6 @@
 [![N|Solid](https://i.ibb.co/LtT31vK/eva-150px.png)](https://eva.bot/)
 
 # eva Frontend -  Angular Elements
-##
 
 This document explains the necessary steps for the web frontend deployment connected to a eva bot.
 The frontend is developed in the Angular 7 framework with Angular Elements(web components) wich allows to include new HTML elements into a site, independent from framework.
